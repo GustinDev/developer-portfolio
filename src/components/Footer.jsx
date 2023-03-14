@@ -3,7 +3,7 @@ import { styles } from "../styles";
 const Footer = () => {
   return (
     <div className="flex items-center justify-center flex-col pb-2 pt-10">
-      <p className="text-[40px] text-white md:text-[50px] font-bold md:text-[50px] pl-4">
+      <p className="text-[30px] text-white md:text-[50px] font-bold md:text-[50px] pl-0 md:pl-4">
         Redes Sociales
       </p>
       <p className={`${styles.sectionSubText} text-center`}>

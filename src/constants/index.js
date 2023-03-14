@@ -1,4 +1,6 @@
 import {
+  Kenke,
+  Lucero,
   mobile,
   backend,
   creator,
@@ -158,26 +160,26 @@ const testimonials = [
   {
     testimonial:
       "Gran profesional con buena capacidad adaptativa, es amigable y dedicado.",
-    name: "Laura Mora",
-    designation: "Administradora",
+    name: "Patricia Andino",
+    designation: "RRHH",
     company: "Colombia",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://randomuser.me/api/portraits/women/14.jpg",
   },
   {
     testimonial:
-      "Una persona apasionada por lo que hace, proactivo y motivado por aprender sobre cosas nuevas.",
+      "Alguien apasionado por lo que hace, proactivo y motivado por aprender habilidades nuevas.",
     name: "Andrés Lucero",
     designation: "Developer",
     company: "Colombia",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    image: Lucero,
   },
   {
     testimonial:
-      "Buen diseñador, paciente y con buenas habilidades por mostrar.",
+      "Es un buen diseñador y programador, paciente y con buenos talentos por demostrar.",
     name: "Keneth Portilla",
     designation: "Ingeniero",
     company: "Colombia",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: Kenke,
   },
 ];
 

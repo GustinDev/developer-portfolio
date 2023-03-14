@@ -7,7 +7,7 @@ const Downloader = () => {
     <div className="flex items-center justify-center flex-col md:mb-0 sm:mb-10">
       <h2
         className={
-          "text-[40px] text-white md:text-[50px] font-bold md:text-[50px] pr-2"
+          "text-[30px] text-white md:text-[50px] font-bold md:text-[50px] pr-2"
         }
       >
         Hoja de Vida
