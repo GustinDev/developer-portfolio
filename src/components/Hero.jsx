@@ -51,7 +51,7 @@ const Hero = () => {
         </a>
         <a href="#about">
           <p
-            className={`${styles.sectionSubText} pt-4 text-gray-50 hover:text-stone-300`}
+            className={`${styles.sectionSubText} pt-4 text-slate-50 hover:text-stone-300`}
           >
             Clickeame para bajar
           </p>
