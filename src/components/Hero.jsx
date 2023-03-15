@@ -25,7 +25,7 @@ const Hero = () => {
           </p>
 
           <br />
-          <p className={styles.sectionSubText}>
+          <p className={`-mt-4 ${styles.sectionSubText}`}>
             (Pro Tip: Puedes mover el escritorio.)
           </p>
         </div>
