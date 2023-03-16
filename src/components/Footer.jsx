@@ -7,7 +7,7 @@ const Footer = () => {
         Redes Sociales
       </p>
       <p className={`${styles.sectionSubText} text-center`}>
-        Links a mis redes
+        Links a mis Redes
       </p>
       <div className="flex items-center justify-center flex-row ">
         <a
