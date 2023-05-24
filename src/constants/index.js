@@ -22,136 +22,137 @@ import {
   starbucks,
   tesla,
   shopify,
+  cimaxcol,
   carrent,
   jobit,
   tripguide,
   threejs,
-} from "../assets";
+} from '../assets';
 
 export const navLinks = [
   {
-    id: "works",
-    title: "Proyectos",
+    id: 'works',
+    title: 'Proyectos',
   },
   {
-    id: "work",
-    title: "Experiencia",
+    id: 'work',
+    title: 'Experiencia',
   },
   ,
   {
-    id: "contact",
-    title: "Contacto",
+    id: 'contact',
+    title: 'Contacto',
   },
 ];
 
 const services = [
   {
-    title: "WEB DEVELOPER",
+    title: 'WEB DEVELOPER',
     icon: web,
   },
   {
-    title: "FRONTEND DEVELOPER",
+    title: 'FRONTEND DEVELOPER',
     icon: mobile,
   },
   {
-    title: "REACT DEVELOPER",
+    title: 'REACT DEVELOPER',
     icon: creator,
   },
   {
-    title: "UX DESIGNER",
+    title: 'UX DESIGNER',
     icon: backend,
   },
 ];
 
 const technologies = [
   {
-    name: "HTML 5",
+    name: 'HTML 5',
     icon: html,
   },
   {
-    name: "CSS 3",
+    name: 'CSS 3',
     icon: css,
   },
   {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: javascript,
   },
   {
-    name: "React JS",
+    name: 'React JS',
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: 'Redux Toolkit',
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
+    name: 'Tailwind CSS',
     icon: tailwind,
   },
   {
-    name: "Bootstrap",
+    name: 'Bootstrap',
     icon: bt,
   },
   {
-    name: "Node JS",
+    name: 'Node JS',
     icon: nodejs,
   },
   {
-    name: "Three JS",
+    name: 'Three JS',
     icon: threejs,
   },
   {
-    name: "Git",
+    name: 'Git & Github',
     icon: git,
   },
 ];
 
 const technologiesMobile = [
   {
-    name: "JavaScript",
+    name: 'JavaScript',
     icon: javascript,
   },
   {
-    name: "React JS",
+    name: 'React JS',
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
+    name: 'Redux Toolkit',
     icon: redux,
   },
   {
-    name: "Tailwind CSS",
+    name: 'Tailwind CSS',
     icon: tailwind,
   },
   {
-    name: "Bootstrap",
+    name: 'Bootstrap',
     icon: bt,
   },
 ];
 
 const experiences = [
   {
-    title: "Bilingual Agent",
-    company_name: "Teleperformance",
+    title: 'Bilingual Agent',
+    company_name: 'Teleperformance',
     icon: starbucks,
-    iconBg: "#E6DEDD",
-    date: "Septiembre 2022 - Noviembre 2022",
+    iconBg: '#E6DEDD',
+    date: 'Septiembre 2022 - Noviembre 2022',
     points: [
-      "Traducción simúltanea: Proporcionar interpretación en tiempo real durante las llamadas telefónicas, reuniones y chat.",
-      "Traducción de documentos: Traducir documentos importantes de la empresa, como contratos, informes y correos electrónicos, del inglés al español o viceversa",
-      "Resolución de Problemas: Proporcionar asistencia en la solución de problemas o transferir al cliente a alguien especializado en el tema.",
+      'Traducción simúltanea: Proporcionar interpretación en tiempo real durante las llamadas telefónicas, reuniones y chat.',
+      'Traducción de documentos: Traducir documentos importantes de la empresa, como contratos, informes y correos electrónicos, del inglés al español o viceversa',
+      'Resolución de Problemas: Proporcionar asistencia en la solución de problemas o transferir al cliente a alguien especializado en el tema.',
     ],
   },
   {
-    title: "Web Developer Freelancer",
-    company_name: "Freelancer",
+    title: 'Web Developer Freelancer',
+    company_name: 'Freelancer',
     icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Noviembre 2022 - Actualmente",
+    iconBg: '#E6DEDD',
+    date: 'Noviembre 2022 - Actualmente',
     points: [
-      "Crear y diseñar interfaces de usuario interactivas, atractivas y responsive utilizando diferentes tenologías actuales.",
-      "Optimizar el rendimiento de los sitios web y aplicaciones para una mejor experiencia del usuario.",
-      "Trabajar en estrecha colaboración con los desarrolladores de back-end para integrar la funcionalidad del servidor con la interfaz de usuario.",
+      'Crear y diseñar interfaces de usuario interactivas, atractivas y responsive utilizando diferentes tenologías actuales.',
+      'Optimizar el rendimiento de los sitios web y aplicaciones para una mejor experiencia del usuario.',
+      'Trabajar en estrecha colaboración con los desarrolladores de back-end para integrar la funcionalidad del servidor con la interfaz de usuario.',
     ],
   },
 ];
@@ -159,94 +160,107 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "Gran profesional con buena capacidad adaptativa, es amigable y dedicado.",
-    name: "Patricia Andino",
-    designation: "RRHH",
-    company: "Colombia",
-    image: "https://randomuser.me/api/portraits/women/14.jpg",
+      'Gran profesional con buena capacidad adaptativa, es amigable y dedicado.',
+    name: 'Patricia Andino',
+    designation: 'RRHH',
+    company: 'Colombia',
+    image: 'https://randomuser.me/api/portraits/women/14.jpg',
   },
   {
     testimonial:
-      "Alguien apasionado por lo que hace, proactivo y motivado por aprender habilidades nuevas.",
-    name: "Andrés Lucero",
-    designation: "Developer",
-    company: "Colombia",
+      'Alguien apasionado por lo que hace, proactivo y motivado por aprender habilidades nuevas.',
+    name: 'Andrés Lucero',
+    designation: 'Developer',
+    company: 'Colombia',
     image: Lucero,
   },
   {
     testimonial:
-      "Es un buen diseñador y programador, paciente y con buenos talentos por demostrar.",
-    name: "Keneth Portilla",
-    designation: "Ingeniero",
-    company: "Colombia",
+      'Es un buen diseñador y programador, paciente y con buenos talentos por demostrar.',
+    name: 'Keneth Portilla',
+    designation: 'Ingeniero',
+    company: 'Colombia',
     image: Kenke,
   },
 ];
 
 const projects = [
   {
-    name: "Diario de las Pesadillas",
+    name: 'Cimaxcol S.A.S',
     description:
-      "Aplicación Web orientada a un público infantil, alberga cuentos, audiolibros y cortometrajes de terror.",
+      'Aplicación Web estática creada para el negocio Cimaxcol S.A.S, empresa dedicada a la comercialización de acabados de construcción.',
     tags: [
       {
-        name: "html",
-        color: "pink-text-gradient",
+        name: 'wordpress',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: cimaxcol,
+    source_code_link: 'https://euphonious-pithivier-1b0cfd.netlify.app/',
+  },
+  {
+    name: 'Diario de las Pesadillas',
+    description:
+      'Aplicación Web orientada a un público infantil, alberga cuentos, audiolibros y cortometrajes de terror.',
+    tags: [
+      {
+        name: 'html',
+        color: 'pink-text-gradient',
       },
       {
-        name: "js",
-        color: "green-text-gradient",
+        name: 'js',
+        color: 'green-text-gradient',
       },
       {
-        name: "bootstrap",
-        color: "blue-text-gradient",
+        name: 'bootstrap',
+        color: 'blue-text-gradient',
       },
     ],
     image: carrent,
     source_code_link:
-      "https://gustindev.github.io/DiarioDeLasPesadillas/index.html",
+      'https://gustindev.github.io/DiarioDeLasPesadillas/index.html',
   },
   {
-    name: "Esto Nos Cuentan",
+    name: 'Esto Nos Cuentan',
     description:
-      "Aplicación Web que permite compartir historias de forma anónima a través de las redes sociales.",
+      'Aplicación Web que permite compartir historias de forma anónima a través de las redes sociales.',
     tags: [
       {
-        name: "html",
-        color: "pink-text-gradient",
+        name: 'html',
+        color: 'pink-text-gradient',
       },
       {
-        name: "js",
-        color: "green-text-gradient",
+        name: 'js',
+        color: 'green-text-gradient',
       },
       {
-        name: "bootstrap",
-        color: "blue-text-gradient",
+        name: 'bootstrap',
+        color: 'blue-text-gradient',
       },
     ],
     image: jobit,
-    source_code_link: "https://gustindev.github.io/EstoNosCuentan/",
+    source_code_link: 'https://gustindev.github.io/EstoNosCuentan/',
   },
   {
-    name: "Pastelitos Dulces",
+    name: 'Pastelitos Dulces',
     description:
       "Aplicación Web creada para 'Pastelitos', un emprendimiento de venta de resposteria y panaderia.",
     tags: [
       {
-        name: "html",
-        color: "pink-text-gradient",
+        name: 'html',
+        color: 'pink-text-gradient',
       },
       {
-        name: "js",
-        color: "green-text-gradient",
+        name: 'js',
+        color: 'green-text-gradient',
       },
       {
-        name: "bootstrap",
-        color: "blue-text-gradient",
+        name: 'bootstrap',
+        color: 'blue-text-gradient',
       },
     ],
     image: tripguide,
-    source_code_link: "https://gustindev.github.io/PastelitosDulces/",
+    source_code_link: 'https://gustindev.github.io/PastelitosDulces/',
   },
 ];
 
