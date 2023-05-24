@@ -22,6 +22,7 @@ import {
   starbucks,
   tesla,
   shopify,
+  wordpress,
   cimaxcol,
   carrent,
   jobit,
@@ -66,12 +67,8 @@ const services = [
 
 const technologies = [
   {
-    name: 'HTML 5',
+    name: 'HTML & CSS',
     icon: html,
-  },
-  {
-    name: 'CSS 3',
-    icon: css,
   },
   {
     name: 'JavaScript',
@@ -94,16 +91,20 @@ const technologies = [
     icon: bt,
   },
   {
-    name: 'Node JS',
-    icon: nodejs,
-  },
-  {
     name: 'Three JS',
     icon: threejs,
   },
   {
+    name: 'Node',
+    icon: nodejs,
+  },
+  {
     name: 'Git & Github',
     icon: git,
+  },
+  {
+    name: 'Wordpress',
+    icon: wordpress,
   },
 ];
 
