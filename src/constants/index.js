@@ -32,12 +32,20 @@ import {
 
 export const navLinks = [
   {
+    id: 'tech',
+    title: 'Skills',
+  },
+  {
     id: 'works',
     title: 'Proyectos',
   },
   {
     id: 'work',
     title: 'Experiencia',
+  },
+  {
+    id: 'data',
+    title: 'Data',
   },
   ,
   {
