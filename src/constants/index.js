@@ -24,6 +24,8 @@ import {
   shopify,
   wordpress,
   cimaxcol,
+  teesa,
+  dogworld,
   carrent,
   jobit,
   tripguide,
@@ -195,9 +197,30 @@ const testimonials = [
 
 const projects = [
   {
+    name: 'Teesa S.A.S',
+    description:
+      'Aplicación Web E-commerce Responsive creada para el negocio Teesa S.A.S., empresa dedicada a la comercialización de equipos alimenticios.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'redux',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: teesa,
+    source_code_link: 'https://pf-teesa-front.vercel.app/',
+  },
+  {
     name: 'Cimaxcol S.A.S',
     description:
-      'Aplicación Web estática creada para el negocio Cimaxcol S.A.S, empresa dedicada a la comercialización de acabados de construcción.',
+      'Aplicación Web Responsive creada para el negocio Cimaxcol S.A.S, empresa dedicada a la comercialización de acabados de construcción.',
     tags: [
       {
         name: 'wordpress',
@@ -206,6 +229,27 @@ const projects = [
     ],
     image: cimaxcol,
     source_code_link: 'https://euphonious-pithivier-1b0cfd.netlify.app/',
+  },
+  {
+    name: 'DogWorld',
+    description:
+      'Aplicación Web Responsive en formato Wiki para los amantes de los perros, el usuario puede navegar, filtrar, y crear datos acerca de los perros.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'redux',
+        color: 'green-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: dogworld,
+    source_code_link: 'https://dogworld-gamma.vercel.app/home',
   },
   {
     name: 'Diario de las Pesadillas',

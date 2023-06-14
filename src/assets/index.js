@@ -23,19 +23,22 @@ import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
 import wordpress from './tech/wordpress.png';
-
 import meta from './company/meta.png';
 import shopify from './company/shopify.png';
 import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
-
 import carrent from './carrent.png';
+
+import dogworld from './dogworld.png';
+import teesa from './Teesa.png';
 import cimaxcol from './cimaxcol.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
 export {
+  dogworld,
   cimaxcol,
+  teesa,
   logo,
   backend,
   creator,
