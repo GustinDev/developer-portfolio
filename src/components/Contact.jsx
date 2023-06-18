@@ -1,13 +1,13 @@
-import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
+import { styles } from '../styles';
+import { EarthCanvas } from './canvas';
+import { SectionWrapper } from '../hoc';
+import { slideIn } from '../utils/motion';
 
-import swal from "sweetalert";
+import swal from 'sweetalert';
 
 const Contact = () => {
   {
@@ -15,9 +15,10 @@ const Contact = () => {
   }
   const formRef = useRef();
   const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
+    phone: '',
   });
   {
     /* Loading  */
@@ -50,31 +51,33 @@ const Contact = () => {
     }
     emailjs
       .send(
-        "service_0nxhlth",
-        "template_mwvejec",
+        'service_15a5mso',
+        'template_d6ylcxd',
         {
           from_name: form.name,
-          to_name: "Juan David Gustin",
+          to_name: 'Juan David Gustin',
           from_email: form.email,
-          to_email: "juandgustin@gmail.com",
+          to_email: 'juandgustin@gmail.com',
+          from_phone: form.phone,
           message: form.message,
         },
-        "u-QBAzeFYmV_VDbW6"
+        'u-QBAzeFYmV_VDbW6'
       )
       .then(
         () => {
           setLoading(false);
           swal({
-            title: "¡Mensaje Enviado!",
-            text: "Me comunicaré lo más pronto posible.",
-            icon: "success",
-            button: "Aceptar",
+            title: '¡Mensaje Enviado!',
+            text: 'Me comunicaré lo más pronto posible.',
+            icon: 'success',
+            button: 'Aceptar',
           });
 
           setForm({
-            name: "",
-            email: "",
-            message: "",
+            name: '',
+            email: '',
+            message: '',
+            phone: '',
           });
         },
         (error) => {
@@ -82,7 +85,7 @@ const Contact = () => {
           console.error(error);
 
           alert(
-            "Lo siento, sucedió un error. Por favor comúniquemonos por otro medio, en la página también encontrarás mis redes sociales."
+            'Lo siento, sucedió un error. Por favor comúniquemonos por otro medio, en la página también encontrarás mis redes sociales.'
           );
         }
       );
@@ -95,8 +98,8 @@ const Contact = () => {
       className={`m-2 xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden`}
     >
       <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className="flex-[0.75] bg-black-100 p-6 rounded-2xl"
+        variants={slideIn('left', 'tween', 0.2, 1)}
+        className='flex-[0.75] bg-black-100 p-6 rounded-2xl'
       >
         <p className={styles.sectionSubText}>¿Nos ponemos en contacto?</p>
         <h3 className={styles.sectionHeadText}>Contacto</h3>
@@ -106,54 +109,66 @@ const Contact = () => {
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-12 flex flex-col gap-8"
+          className='mt-12 flex flex-col gap-8'
         >
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-2 -mt-8">Nombre</span>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-2 -mt-8'>Nombre</span>
             <input
-              type="text"
-              name="name"
+              type='text'
+              name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="¿Cuál es tu nombre?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder='¿Cuál es tu nombre?'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">Correo</span>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-2'>Correo</span>
             <input
-              type="email"
-              name="email"
+              type='email'
+              name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="¿Cuál es tu correo?"
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder='¿Cuál es tu correo?'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
-          <label className="flex flex-col">
-            <span className="text-white font-medium mb-2">Mensaje</span>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-2'>Celular</span>
+            <input
+              type='phone'
+              name='phone'
+              value={form.phone}
+              onChange={handleChange}
+              placeholder='¿Cuál es tu celular?'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+            />
+          </label>
+          <label className='flex flex-col'>
+            <span className='text-white font-medium mb-2'>Mensaje</span>
             <textarea
               rows={4}
-              name="message"
+              name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder="Envíame un mensaje."
-              className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
+              placeholder='Envíame un mensaje.'
+              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
+
           {/* Enviar */}
           <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            type='submit'
+            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? "Enviando..." : "Enviar"}
+            {loading ? 'Enviando...' : 'Enviar'}
           </button>
         </form>
       </motion.div>
 
       <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+        variants={slideIn('right', 'tween', 0.2, 1)}
+        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
         {/* Render Planeta*/}
         <EarthCanvas />
@@ -162,4 +177,4 @@ const Contact = () => {
   );
 };
 
-export default SectionWrapper(Contact, "contact");
+export default SectionWrapper(Contact, 'contact');
