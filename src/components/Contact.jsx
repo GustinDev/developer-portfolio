@@ -44,7 +44,7 @@ const Contact = () => {
     setLoading(true);
 
     {
-      /* EMAILJS - CREAR Y DARLE DIRECCIÓN*/
+      /* EMAILJS - CREAR Y DARLE DIRECCIÓN-*/
     }
     {
       /* Dentro del send van 4 parámetros: Primero el service ID, luego template ID, los parámetros y luego el Public Key. Luego ponemos el then con las alertas y lo reseteamos.*/
