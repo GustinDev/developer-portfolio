@@ -93,6 +93,10 @@ const technologies = [
     icon: redux,
   },
   {
+    name: 'Typescript',
+    icon: typescript,
+  },
+  {
     name: 'Tailwind CSS',
     icon: tailwind,
   },
@@ -101,11 +105,7 @@ const technologies = [
     icon: bt,
   },
   {
-    name: 'Three JS',
-    icon: threejs,
-  },
-  {
-    name: 'Node',
+    name: 'Node Express',
     icon: nodejs,
   },
   {
@@ -132,12 +132,12 @@ const technologiesMobile = [
     icon: redux,
   },
   {
-    name: 'Tailwind CSS',
-    icon: tailwind,
+    name: 'Typescript',
+    icon: typescript,
   },
   {
-    name: 'Bootstrap',
-    icon: bt,
+    name: 'Tailwind CSS',
+    icon: tailwind,
   },
 ];
 
