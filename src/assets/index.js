@@ -22,7 +22,6 @@ import redux from './tech/redux.png';
 import tailwind from './tech/tailwind.png';
 import typescript from './tech/typescript.png';
 import threejs from './tech/threejs.svg';
-
 import wordpress from './tech/wordpress.png';
 import meta from './company/meta.png';
 import shopify from './company/shopify.png';
@@ -30,7 +29,9 @@ import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
 import carrent from './carrent.png';
 
+import portfolio from './Porfolio.png';
 import dogworld from './dogworld.png';
+import ultragym from './Ultragym.png';
 import teesa from './Teesa.png';
 import cimaxcol from './cimaxcol.png';
 import jobit from './jobit.png';
@@ -40,6 +41,8 @@ export {
   dogworld,
   cimaxcol,
   teesa,
+  ultragym,
+  portfolio,
   logo,
   backend,
   creator,

@@ -25,6 +25,8 @@ import {
   wordpress,
   cimaxcol,
   teesa,
+  ultragym,
+  portfolio,
   dogworld,
   carrent,
   jobit,
@@ -199,7 +201,7 @@ const projects = [
   {
     name: 'Teesa S.A.S',
     description:
-      'Aplicación Web E-commerce Responsive creada para el negocio Teesa S.A.S., empresa dedicada a la comercialización de equipos alimenticios.',
+      'Aplicación Web E-commerce responsive creada para el negocio Teesa S.A.S., empresa dedicada a la comercialización de equipos alimenticios.',
     tags: [
       {
         name: 'react',
@@ -216,11 +218,34 @@ const projects = [
     ],
     image: teesa,
     source_code_link: 'https://pf-teesa-front.vercel.app/',
+    githubl: 'https://github.com/LauraCayuelaT/PFTeesa_Front',
+  },
+  {
+    name: 'UltraGym',
+    description:
+      'Aplicación Web responsive creada para el gimnasio en surgimiento Ultragym, se descataca por una UX-UI moderna e intuitiva.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'typescript',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: ultragym,
+    source_code_link: 'https://ultra-gym-ts-react.vercel.app/',
+    githubl: 'https://github.com/GustinDev/ultra-gym-ts-react',
   },
   {
     name: 'Cimaxcol S.A.S',
     description:
-      'Aplicación Web Responsive creada para el negocio Cimaxcol S.A.S, empresa dedicada a la comercialización de acabados de construcción.',
+      'Aplicación Web responsive creada para el negocio Cimaxcol S.A.S, empresa dedicada a la comercialización de acabados de construcción.',
     tags: [
       {
         name: 'wordpress',
@@ -229,11 +254,12 @@ const projects = [
     ],
     image: cimaxcol,
     source_code_link: 'https://euphonious-pithivier-1b0cfd.netlify.app/',
+    githubl: 'https://euphonious-pithivier-1b0cfd.netlify.app/',
   },
   {
     name: 'DogWorld',
     description:
-      'Aplicación Web Responsive en formato Wiki para los amantes de los perros, el usuario puede navegar, filtrar, y crear datos acerca de los perros.',
+      'Aplicación Web responsive en formato Wiki para los amantes de los perros, el usuario puede navegar, filtrar, y crear datos acerca de los perros.',
     tags: [
       {
         name: 'react',
@@ -250,6 +276,25 @@ const projects = [
     ],
     image: dogworld,
     source_code_link: 'https://dogworld-gamma.vercel.app/home',
+    githubl: 'https://github.com/GustinDev/dogworld',
+  },
+  {
+    name: 'Portafolio',
+    description:
+      'Portafolio en línea responsive para destacar mis proyectos como desarrollador web frontend. ¡Tú estás aquí! Gracias por entrar.',
+    tags: [
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: portfolio,
+    source_code_link: 'https://gustindev.github.io/developer-portfolio/',
+    githubl: 'https://github.com/GustinDev/developer-portfolio',
   },
   {
     name: 'Diario de las Pesadillas',
@@ -272,6 +317,7 @@ const projects = [
     image: carrent,
     source_code_link:
       'https://gustindev.github.io/DiarioDeLasPesadillas/index.html',
+    githubl: 'https://github.com/GustinDev/DiarioDeLasPesadillas',
   },
   {
     name: 'Esto Nos Cuentan',
@@ -293,6 +339,7 @@ const projects = [
     ],
     image: jobit,
     source_code_link: 'https://gustindev.github.io/EstoNosCuentan/',
+    githubl: 'https://github.com/GustinDev/EstoNosCuentan',
   },
   {
     name: 'Pastelitos Dulces',
@@ -314,6 +361,7 @@ const projects = [
     ],
     image: tripguide,
     source_code_link: 'https://gustindev.github.io/PastelitosDulces/',
+    githubl: 'https://github.com/GustinDev/PastelitosDulces',
   },
 ];
 
