@@ -35,7 +35,8 @@ const Navbar = () => {
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <div
+        <Link
+          to='/'
           className='flex items-center gap-2'
           onClick={() => {
             setActive('');
@@ -51,7 +52,7 @@ const Navbar = () => {
             Juan Gustin &nbsp;
             <span className='lg:block hidden '> | Dev </span>
           </p>
-        </div>
+        </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-5 m-1'>
           {navLinks.map((nav) => (
