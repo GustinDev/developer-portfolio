@@ -1,102 +1,58 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
-
+import { useForm } from 'react-hook-form';
 import { styles } from '../styles';
 import { EarthCanvas } from './canvas';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
-
 import swal from 'sweetalert';
 
 const Contact = () => {
-  {
-    /* Estado inicial de lo que recibimos*/
-  }
-  const formRef = useRef();
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-    phone: '',
-  });
-  {
-    /* Loading  */
-  }
-  const [loading, setLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
-  {
-    /* Hacemos el update de los cambios del form, para que se vaya cambiando a medida de que el user los cambie */
-  }
+  const onSubmit = async (data) => {
+    try {
+      swal({
+        title: '¡Mensaje Enviado!',
+        text: 'Me comunicaré lo más pronto posible.',
+        icon: 'success',
+        button: 'Aceptar',
+      });
 
-  const handleChange = (e) => {
-    const { target } = e;
-    const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-
-    {
-      /* EMAILJS - CREAR Y DARLE DIRECCIÓN-*/
-    }
-    {
-      /* Dentro del send van 4 parámetros: Primero el service ID, luego template ID, los parámetros y luego el Public Key. Luego ponemos el then con las alertas y lo reseteamos.*/
-    }
-    emailjs
-      .send(
+      await emailjs.send(
         'service_15a5mso',
         'template_d6ylcxd',
         {
-          from_name: form.name,
+          from_name: data.name,
           to_name: 'Juan David Gustin',
-          from_email: form.email,
+          from_email: data.email,
           to_email: 'juandgustin@gmail.com',
-          from_phone: form.phone,
-          message: form.message,
+          from_phone: data.phone,
+          message: data.message,
         },
         'u-QBAzeFYmV_VDbW6'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          swal({
-            title: '¡Mensaje Enviado!',
-            text: 'Me comunicaré lo más pronto posible.',
-            icon: 'success',
-            button: 'Aceptar',
-          });
-
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-            phone: '',
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert(
-            'Lo siento, sucedió un error. Por favor comúniquemonos por otro medio, en la página también encontrarás mis redes sociales.'
-          );
-        }
       );
+
+      reset();
+    } catch (error) {
+      console.error(error);
+      swal({
+        title: '¡Sucedió un error!',
+        text: 'Lo lamento mucho. También puedes contactarme por mis redes sociales.',
+        icon: 'error',
+        button: 'Aceptar',
+      });
+    }
   };
-  {
-    /* CREAR FORM DE CONTACTO(ESTILOS) - SUBMIT FORM, SLIDE y HANDLE CHANGE  */
-  }
+
   return (
-    <div
-      className={`m-2 xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden`}
-    >
+    <div className='m-2 xl:mt-12 flex xl:flex-row flex-col gap-10 overflow-hidden'>
       <motion.div
         variants={slideIn('left', 'tween', 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-6 rounded-2xl'
@@ -104,64 +60,82 @@ const Contact = () => {
         <p className={styles.sectionSubText}>¿Nos ponemos en contacto?</p>
         <h3 className={styles.sectionHeadText}>Contacto</h3>
 
-        {/* Formulario*/}
-
         <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          onSubmit={handleSubmit(onSubmit)}
+          className='mt-12 flex flex-col'
         >
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-2 -mt-8'>Nombre</span>
             <input
               type='text'
               name='name'
-              value={form.name}
-              onChange={handleChange}
               placeholder='¿Cuál es tu nombre?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              className=' bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              {...register('name', { required: 'El nombre es requerido' })}
             />
+            {errors.name ? (
+              <span className='text-red-500 mb-2'>{errors.name.message}</span>
+            ) : (
+              <div className='h-[24px] mb-2'></div>
+            )}
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-2'>Correo</span>
             <input
               type='email'
               name='email'
-              value={form.email}
-              onChange={handleChange}
               placeholder='¿Cuál es tu correo?'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              {...register('email', {
+                required: 'El correo electrónico es requerido',
+              })}
             />
+            {errors.email ? (
+              <span className='text-red-500 mb-2'>{errors.email.message}</span>
+            ) : (
+              <div className='h-[24px] mb-2'></div>
+            )}
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-2'>Celular</span>
             <input
-              type='phone'
+              type='tel'
               name='phone'
-              value={form.phone}
-              onChange={handleChange}
               placeholder='¿Cuál es tu celular?'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              {...register('phone', {
+                required: 'El número de celular es requerido',
+              })}
             />
+            {errors.phone ? (
+              <span className='text-red-500 mb-2'>{errors.phone.message}</span>
+            ) : (
+              <div className='h-[24px] mb-2'></div>
+            )}
           </label>
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-2'>Mensaje</span>
             <textarea
               rows={4}
               name='message'
-              value={form.message}
-              onChange={handleChange}
               placeholder='Envíame un mensaje.'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              {...register('message', { required: 'El mensaje es requerido' })}
             />
+            {errors.message ? (
+              <span className='text-red-500 mb-2'>
+                {errors.message.message}
+              </span>
+            ) : (
+              <div className='h-[24px] mb-2'></div>
+            )}
           </label>
 
-          {/* Enviar */}
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-tertiary hover:bg-light py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
-            {loading ? 'Enviando...' : 'Enviar'}
+            Enviar
           </button>
         </form>
       </motion.div>
@@ -170,7 +144,6 @@ const Contact = () => {
         variants={slideIn('right', 'tween', 0.2, 1)}
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
       >
-        {/* Render Planeta*/}
         <EarthCanvas />
       </motion.div>
     </div>
