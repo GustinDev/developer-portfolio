@@ -35,20 +35,23 @@ const Navbar = () => {
       }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-        <Link
-          to='/'
+        <div
           className='flex items-center gap-2'
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='l' className='w-9 h-9 object-contain' />
+          <img
+            src={logo}
+            alt='l'
+            className='w-9 h-9 object-contain'
+          />
           <p className='text-white text-[18px] font-bold cursor-pointer flex'>
             Juan Gustin &nbsp;
             <span className='lg:block hidden '> | Dev </span>
           </p>
-        </Link>
+        </div>
 
         <ul className='list-none hidden sm:flex flex-row gap-5 m-1'>
           {navLinks.map((nav) => (
