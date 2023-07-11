@@ -32,6 +32,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  rn,
+  next,
 } from '../assets';
 
 export const navLinks = [
@@ -68,7 +70,7 @@ const services = [
     icon: mobile,
   },
   {
-    title: 'REACT DEVELOPER',
+    title: 'MOBILE DEVELOPER',
     icon: creator,
   },
   {
@@ -87,6 +89,10 @@ const technologies = [
     icon: javascript,
   },
   {
+    name: 'Typescript',
+    icon: typescript,
+  },
+  {
     name: 'React JS',
     icon: reactjs,
   },
@@ -95,28 +101,24 @@ const technologies = [
     icon: redux,
   },
   {
-    name: 'Typescript',
-    icon: typescript,
-  },
-  {
     name: 'Tailwind CSS',
     icon: tailwind,
   },
   {
-    name: 'Bootstrap',
-    icon: bt,
+    name: 'NextJS',
+    icon: next,
   },
   {
-    name: 'Node Express',
+    name: 'React Native',
+    icon: rn,
+  },
+  {
+    name: 'NodeJS',
     icon: nodejs,
   },
   {
     name: 'Git & Github',
     icon: git,
-  },
-  {
-    name: 'Wordpress',
-    icon: wordpress,
   },
 ];
 
@@ -126,20 +128,20 @@ const technologiesMobile = [
     icon: javascript,
   },
   {
-    name: 'React JS',
-    icon: reactjs,
-  },
-  {
-    name: 'Redux Toolkit',
-    icon: redux,
-  },
-  {
     name: 'Typescript',
     icon: typescript,
   },
   {
-    name: 'Tailwind CSS',
-    icon: tailwind,
+    name: 'React JS',
+    icon: reactjs,
+  },
+  {
+    name: 'NextJS',
+    icon: next,
+  },
+  {
+    name: 'React Native',
+    icon: rn,
   },
 ];
 
