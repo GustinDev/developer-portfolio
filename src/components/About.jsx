@@ -6,7 +6,7 @@ import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
-//HIGHER ORDER COMPONENT - CONTAINS ALL ABOUT
+//HIGHER ORDER COMPONENT - CONTAINS ALL ABOUT-
 import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -61,7 +61,11 @@ const About = () => {
         {
           //Go to services to change experience
           services.map((service, index) => (
-            <ServiceCard key={service.title} index={index} {...service} />
+            <ServiceCard
+              key={service.title}
+              index={index}
+              {...service}
+            />
           ))
         }
       </div>
