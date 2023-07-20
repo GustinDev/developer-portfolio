@@ -1,9 +1,7 @@
 import React from 'react';
-import Tilt from 'react-tilt';
-import { motion } from 'framer-motion';
-
 import { styles } from '../styles';
 import { github } from '../assets';
+import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
@@ -24,14 +22,7 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
       {/* Movement */}
-      <Tilt
-        options={{
-          max: 15,
-          scale: 1,
-          speed: 150,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
-      >
+      <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full transition duration-100 transform hover:scale-105'>
         {/* Card */}
         <div
           onClick={() => window.open(source_code_link, '_blank')}
@@ -75,7 +66,7 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };

@@ -1,5 +1,4 @@
 import React from 'react';
-import Tilt from 'react-tilt';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
@@ -11,10 +10,10 @@ import { SectionWrapper } from '../hoc';
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className='xs:w-[250px] w-full'>
+    <div className='xs:w-[250px] w-full transition duration-100 transform hover:scale-105'>
       <motion.div
-        variants={fadeIn('right', 'spring', index * 0.7, 0.75)}
-        className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+        variants={fadeIn('right', 'spring', index * 0.3, 0.7)}
+        className='w-full green-pink-gradient p-[2px] rounded-[20px] shadow-card'
       >
         <div
           options={{
@@ -35,7 +34,7 @@ const ServiceCard = ({ index, title, icon }) => {
           </h3>
         </div>
       </motion.div>
-    </Tilt>
+    </div>
   );
 };
 
