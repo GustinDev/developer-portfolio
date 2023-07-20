@@ -31,10 +31,10 @@ import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
 import carrent from './carrent.png';
 
-import portfolio from './Porfolio.png';
+import portfolio from './porfolio.png';
 import dogworld from './dogworld.png';
-import ultragym from './Ultragym.png';
-import teesa from './Teesa.png';
+import ultragym from './ultragym.png';
+import teesa from './teesa.png';
 import cimaxcol from './cimaxcol.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
