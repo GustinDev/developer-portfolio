@@ -219,7 +219,7 @@ const projects = [
       },
     ],
     image: teesa,
-    source_code_link: 'https://pf-teesa-front.vercel.app/',
+    source_code_link: 'https://www.teesa.online/',
     githubl: 'https://github.com/LauraCayuelaT/PFTeesa_Front',
   },
   {
@@ -295,7 +295,7 @@ const projects = [
       },
     ],
     image: portfolio,
-    source_code_link: 'https://gustindev.github.io/developer-portfolio/',
+    source_code_link: 'https://www.gustindev.tech/',
     githubl: 'https://github.com/GustinDev/developer-portfolio',
   },
   {
