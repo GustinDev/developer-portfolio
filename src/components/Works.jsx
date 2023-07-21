@@ -7,7 +7,7 @@ import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
 {
-  /* Creación y especificación de la cartas, para luego mapear projects*/
+  /* Creación y especificación de la cartas, para luego mapear projects - letsgooo*/
 }
 
 const ProjectCard = ({
