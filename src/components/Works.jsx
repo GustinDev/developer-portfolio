@@ -4,7 +4,7 @@ import { github } from '../assets';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { projects } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
+import { fadeIn, textVariant, slideIn, zoomIn } from '../utils/motion';
 
 {
   /* Creación y especificación de la cartas, para luego mapear projects - letsgooo*/
@@ -20,7 +20,7 @@ const ProjectCard = ({
   githubl,
 }) => {
   return (
-    <motion.div variants={fadeIn('up', 'spring', index * 0.5, 0.75)}>
+    <div>
       {/* Movement */}
       <div className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full transition duration-100 transform hover:scale-105'>
         {/* Card */}
@@ -67,7 +67,7 @@ const ProjectCard = ({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -78,22 +78,22 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={`${styles.sectionSubText} `}>
           ¿Quieres conocer mi trabajo?
         </p>
         <h2 className={`${styles.sectionHeadText}`}>Proyectos</h2>
-      </motion.div>
+      </div>
       {/* Párrafo - Descripción de proyectos */}
       <div className='w-full flex'>
-        <motion.p
+        <p
           variants={fadeIn('', '', 0.1, 1)}
           className='mt-3 text-secondary text-[20px] max-w-4xl leading-[30px]'
         >
           Todos mi proyectos han sido diseñados para ofrecer una experiencia de
           usuario intuitiva y fácil de usar en una amplia gama de dispositivos.
           ¡Espero que disfrutes explorando mi trabajo!
-        </motion.p>
+        </p>
       </div>
       {/* Mapeo de cada proyecto por cada carta. */}
       <div className='mt-20 flex flex-wrap gap-7'>
