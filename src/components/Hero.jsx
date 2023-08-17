@@ -33,7 +33,7 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      {/* Moble Tocuh Button */}
+      {/* Moble Touch Button */}
       <div className='absolute bottom-20 md:bottom-10 lg:bottom-10 w-full flex flex-col justify-center items-center'>
         {/* Moble */}
         <a href='#about'>
