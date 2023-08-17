@@ -24,6 +24,7 @@ import {
   shopify,
   wordpress,
   cimaxcol,
+  todoapp,
   teesa,
   ultragym,
   portfolio,
@@ -261,7 +262,7 @@ const projects = [
   {
     name: 'DogWorld',
     description:
-      'Aplicación Web responsive en formato Wiki para los amantes de los perros, el usuario puede navegar, filtrar, y crear datos acerca de los perros.',
+      'Aplicación Web responsive Wiki para los amantes de los perros. Se puede navegar, filtrar, y crear datos acerca de los perros.',
     tags: [
       {
         name: 'react',
@@ -297,6 +298,32 @@ const projects = [
     image: portfolio,
     source_code_link: 'https://www.gustindev.tech/',
     githubl: 'https://github.com/GustinDev/developer-portfolio',
+  },
+  {
+    name: 'Awesome To Do App',
+    description:
+      'Aplicación Web orientada a ayudarte a organizar tareas, puedes crear, editar, borrar y filtrar "To Dos".',
+    tags: [
+      {
+        name: 'nextjs',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'react',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'ts',
+        color: 'blue-text-gradient',
+      },
+      {
+        name: 'tailwind',
+        color: 'blue-text-gradient',
+      },
+    ],
+    image: todoapp,
+    source_code_link: 'https://ultra-mega-awesome-todo-app.vercel.app/',
+    githubl: 'https://github.com/GustinDev/ultra-mega-awesome-todo-app',
   },
   {
     name: 'Diario de las Pesadillas',

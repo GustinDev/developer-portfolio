@@ -30,16 +30,18 @@ import shopify from './company/shopify.png';
 import starbucks from './company/starbucks.png';
 import tesla from './company/tesla.png';
 import carrent from './carrent.png';
-
+//Projects:
 import portfolio from './porfolio.png';
 import dogworld from './dogworld.png';
 import ultragym from './ultragym.png';
 import teesa from './teesa.png';
 import cimaxcol from './cimaxcol.png';
+import todoapp from './todo.png';
 import jobit from './jobit.png';
 import tripguide from './tripguide.png';
 
 export {
+  todoapp,
   dogworld,
   cimaxcol,
   teesa,
